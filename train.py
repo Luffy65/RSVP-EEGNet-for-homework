@@ -1,4 +1,4 @@
-from models.eegnet import EEGNet
+from modelliEEG.eegnet import EEGNet
 from data.dataset import TrainDataset
 from torch import optim
 from torch.utils.data import DataLoader

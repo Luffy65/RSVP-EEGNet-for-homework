@@ -1,4 +1,4 @@
-from models.eegnet import EEGNet
+from modelliEEG.eegnet import EEGNet
 from data.dataset import TestDataset
 from torch.utils.data import DataLoader
 from torch.autograd import Variable
