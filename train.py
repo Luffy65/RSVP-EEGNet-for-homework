@@ -14,7 +14,7 @@ import torch.nn as nn
 def train_model(args, model, data_loader, criterion, optimizer, scheduler):
     """
     :param args: Training process parameters
-:param model: Network
+    :param model: Network
     :param data_loader: Data
     :param criterion: Loss function
     :param optimizer: Optimizer
