@@ -6,7 +6,7 @@ dataset_path = project_path + os.sep + "data" + os.sep + "songningning_bef"
 save_weights_path = project_path + os.sep + "output" + os.sep + "weights.pkl"
 finish_weights_path = project_path + os.sep + "checkpoints" + os.sep + "song_weights.pkl"
 
-if __name__ == "__main__":
+def parse_arguments():
     parser = argparse.ArgumentParser(description="Pytorch implementation of EEGNet")
     parser.add_argument('--has-cuda', type=bool, default=False)
     parser.add_argument('--data-path', type=str, default=dataset_path)
@@ -23,9 +23,11 @@ if __name__ == "__main__":
     parser.add_argument('--finish-weights-path', type=str, default=finish_weights_path, help="Training from one checkpoint")
     parser.add_argument('--start-epoch', type=int, default=0, help="Corresponding to the epoch of resume")
     parser.add_argument('--network', type=str, default="EEGNet")
-    args = parser.parse_args()
+    return parser.parse_args()
+
+if __name__ == "__main__":
+    args = parse_arguments()
 else:
-    # Define args with default values for import usage
     class Args:
         has_cuda = False
         data_path = dataset_path
