@@ -1,3 +1,4 @@
+# THIS MODEL IS PROBABLY WRONG, DON'T USE IT
 import torch
 import torch.nn as nn
 
